@@ -35,6 +35,9 @@ const Header = () => {
                     <NavLink className="nav-link" to="/contact" activeClassName="active">Contact</NavLink>
                   </li>
                   <li className="nav-item">
+                    <NavLink className="nav-link" to="/login" activeClassName="active">Log in</NavLink>
+                  </li>
+                  <li className="nav-item">
                     <NavLink className="nav-link" to="/">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style={{ enableBackground: 'new 0 0 456.029 456.029' }} xmlSpace="preserve">
                         <g>
@@ -90,11 +93,6 @@ const Header = () => {
                       </svg>
                     </NavLink>
                   </li>
-                  <form className="form-inline">
-                    <button className="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                      <i className="fNavLink fa-search" aria-hidden="true" />
-                    </button>
-                  </form>
                 </ul>
               </div>
             </nav>

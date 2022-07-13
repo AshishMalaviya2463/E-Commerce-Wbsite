@@ -8,18 +8,22 @@ import Testimonial from './container/Testimonial'
 import Product from './container/Product'
 import Blog from './container/Blog'
 import Contact from './container/Contact'
+import Login from './container/Login'
+import PrivetROuting from './routing/PrivetROuting'
+import PublicRouting from './routing/PublicRouting'
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/testimonial" component={Testimonial} />
-        <Route exact path="/product" component={Product} />
-        <Route exact path="/blog" component={Blog} />
-        <Route exact path="/contact" component={Contact} />
+        <PublicRouting exact path='/' component={Home} />
+        <PublicRouting exact path="/about" component={About} />
+        <PublicRouting exact path="/testimonial" component={Testimonial} />
+        <PrivetROuting exact path="/product" component={Product} />
+        <PublicRouting exact path="/blog" component={Blog} />
+        <PublicRouting exact path="/contact" component={Contact} />
+        <PublicRouting exact restrict={true} path="/login" component={Login} />
       </Switch>
       <Footer />
     </div>
